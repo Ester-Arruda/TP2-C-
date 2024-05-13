@@ -53,6 +53,23 @@ namespace TP2
             Console.WriteLine("Total de mulheres: " + mTotal + " - " + mPorcentagem + "%");
             Console.WriteLine("Total de crianças: " + cTotal + " - " + cPorcentagem + "%");
             Console.WriteLine("Total de idosos: " + iTotal + " - " + iPorcentagem + "%");
+
+             int iSuperior = 0, iInferior = 0;
+             int totalPar = 0, totalImpar = 0;
+             Console.WriteLine("Entre com o intervalo inferior:");
+             iInferior = int.Parse(Console.ReadLine());
+             Console.WriteLine("Entre com o intervalo superior:");
+             iSuperior = int.Parse(Console.ReadLine());
+
+             for (int i = iInferior;  i <= iSuperior; i++)
+             {
+                if(i % 2 == 0) totalPar += i;
+                else totalImpar += i;
+             }
+
+             Console.WriteLine("Soma dos pares: " + totalPar);
+             Console.WriteLine("Soma dos ímpares: " + totalImpar);
+
         }
 
         public static double CalculaPorcentagem(double counterTotal, double pessoa)
