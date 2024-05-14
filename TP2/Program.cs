@@ -70,8 +70,27 @@ namespace TP2
              Console.WriteLine("Soma dos pares: " + totalPar);
              Console.WriteLine("Soma dos ímpares: " + totalImpar);
 
-        }
+             Console.WriteLine("Digite um número: ");
+             int numero = int.Parse(Console.ReadLine());
+             Console.WriteLine("Os números primos são: ");
 
+             for (int i = 2; i <= numero; i++)
+             {
+                 bool ePrimo = true;
+                 for (int j = 2; j < i; j++)
+                 {
+                     if (i % j == 0)
+                     {
+                         ePrimo = false;
+                         break;
+                     }
+                 }
+                 if (ePrimo)
+                 {
+                     Console.WriteLine(i);
+                 }
+             }
+        }
         public static double CalculaPorcentagem(double counterTotal, double pessoa)
         {
             return (pessoa / counterTotal) * 100;
